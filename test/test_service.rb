@@ -8,6 +8,10 @@ class TestService < ActiveSupport::TestCase
     @service = Thruster::Service.new(@config)
   end
 
+  test "service has a config" do
+    assert_equal @config, @service.config
+  end
+
   test "run service" do
     assert_equal "running", @service.run
   end
